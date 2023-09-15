@@ -1,0 +1,78 @@
+---
+title: Click
+permalink: /ClickTheButton/
+---
+
+<head>
+    <style>
+        .popup{
+            font: 1em sans-serif;
+            font-size: 16px;
+            background: #cfcfcf;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0.1);
+            text-align: center;
+            padding: 30px 30px 20px;
+            color: #333;
+            visibility: hidden;
+            transition: transform 0.3s, top 0.3s;
+            display: flex;
+            align-items: center;
+            border-image: url(https://kkcbal.github.io/madeacopy/images/border-color.jpg) 10 / 10px round;
+            border-image-width: 25px 7px 7px 7px;
+            border-image-outset: 5px;
+          }
+          .open-popup{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%,-23%) scale(1);
+          }
+          .popup img{
+            width: 250px;
+            height: 250px;
+            margin-right: 20px;
+          }
+          .popup button{
+            padding: 5px 10px;
+            border: 0;
+            outline: none;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+    </style>
+    <script>
+        function openPopup(){
+            document.getElementById("pop").classList.add("open-popup");
+        }
+        function closePopup(){
+            document.getElementById("pop").classList.remove("open-popup");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openPopup()">Click</button>
+    <div class="popup" id="pop">
+        <div><img src="https://kkcbal.github.io/madeacopy/images/credit-card-please.jpg"></div>
+        <div>
+            <p>H-hi there...<br>Do you th-think I could have your<br>credit card information, p-please?</p>
+            <p><label>
+                Card number:
+                <input type="text" name="name" id="name" required>
+            </label></p>
+            <p><label>
+                Expiry date:
+                <input type="text" name="pin" id="pin" required>
+            </label></p>
+            <p><label>
+                Security code:
+                <input type="number" name="cvv" id="cvv">
+            </label></p>
+            <p>
+                <button onclick="closePopup()">Th-thanks</button>
+            </p>
+        </div>
+    </div>
+</body>
