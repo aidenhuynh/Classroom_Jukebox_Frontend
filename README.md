@@ -59,7 +59,7 @@ Enjoy using Classroom Jukebox, and let the music enhance your classroom experien
 Install the dependencies...
 
 ```
-cd svelte-app
+cd Classroom_Jukebox_Frontend
 npm install
 ```
 
