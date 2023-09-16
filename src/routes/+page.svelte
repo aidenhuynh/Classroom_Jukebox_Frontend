@@ -7,7 +7,7 @@
 </svelte:head>
 
 <section>
-	
+	<h1>[Insert homepage here]</h1>
 </section>
 
 <style>
